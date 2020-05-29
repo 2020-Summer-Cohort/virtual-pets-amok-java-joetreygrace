@@ -33,4 +33,35 @@ public class OrganicDogTest {
         VirtualPet underTest = new OrganicDog("Sam");
         assertEquals(15, underTest.getThirstLevel());
     }
+
+    @Test
+    public void organicDogShouldHaveBoredom() {
+        VirtualPet underTest = new OrganicDog("Sam");
+        assertEquals(15, underTest.getBoredomLevel());
+    }
+
+    @Test
+    public void organicDogShouldHaveHealth(){
+        VirtualPet underTest = new OrganicDog("Sam");
+        assertEquals(100,underTest.getHealthLevel());
+    }
+
+    @Test
+    public void organicDogShouldHaveHappiness(){
+        VirtualPet underTest = new OrganicDog("Sam");
+        assertEquals(100,underTest.getHappinessLevel());
+    }
+
+    @Test
+    public void organicDogShouldHaveCageDirtiness(){
+        VirtualPet underTest = new OrganicDog("Sam");
+        assertEquals(0,underTest.getCageDirtiness());
+    }
+
+    @Test
+    public void organicDogShouldBeWalked(){
+        VirtualPet underTest = new OrganicDog("Sam");
+        underTest.walkTheDog();
+        assertEquals(0,underTest.getBoredomLevel());
+    }
 }

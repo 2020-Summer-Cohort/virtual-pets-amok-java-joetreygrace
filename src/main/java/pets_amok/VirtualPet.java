@@ -6,6 +6,9 @@ public abstract class VirtualPet {
     protected String virtualPetName;
     protected String virtualPetDescriptor;
     protected int boredomLevel;
+    protected int hungerLevel;
+    protected int thirstLevel;
+    protected int cageDirtiness;
 
     public VirtualPet(String virtualPetName, String virtualPetDescriptor) {
         this.virtualPetName = virtualPetName;
@@ -31,7 +34,6 @@ public abstract class VirtualPet {
         return virtualPetDescriptor;
     }
 
-
     public int getBoredomLevel() {
         return boredomLevel;
     }
@@ -52,18 +54,14 @@ public abstract class VirtualPet {
 //        return hungerLevel;
 //    }
 
-    public int playWithPet() {
-        boredomLevel = boredomLevel - 25;
-        if (boredomLevel < 0) {
-            boredomLevel = 0;
-        }
-        return boredomLevel;
-    }
-
     public abstract void tick();
 
     public abstract int getHungerLevel();
 
     public abstract int getThirstLevel();
+
+    public abstract int getCageDirtiness();
+
+    public abstract int walkTheDog();
 }
 

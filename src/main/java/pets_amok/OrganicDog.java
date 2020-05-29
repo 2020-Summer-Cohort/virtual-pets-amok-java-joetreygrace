@@ -1,13 +1,12 @@
 package pets_amok;
 
-public class OrganicDog extends VirtualDog implements OrganicAnimal{
-    private int hungerLevel;
-    private int thirstLevel;
+public class OrganicDog extends VirtualDog implements OrganicAnimal {
 
     public OrganicDog(String virtualPetName) {
-        super(virtualPetName,"Organic Dog");
+        super(virtualPetName, "Organic Dog");
         this.hungerLevel = 15;
         this.thirstLevel = 15;
+        this.cageDirtiness = 0;
     }
 
     public int getHungerLevel() {
@@ -17,6 +16,11 @@ public class OrganicDog extends VirtualDog implements OrganicAnimal{
 
     public int getThirstLevel() {
         return thirstLevel;
+    }
+
+
+    public int getCageDirtiness() {
+        return cageDirtiness;
     }
 
     @Override
