@@ -58,7 +58,7 @@ public class RobotDogTest {
     public void robotDogShouldGetOiled() {
         VirtualPet underTest = new RobotDog("Spark");
         ((RobotDog) underTest).oilRobotPet();
-        assertEquals(10, ((RobotDog) underTest).getMaintenanceLevel());
+        assertEquals(0, ((RobotDog) underTest).getMaintenanceLevel());
     }
 
     @Test

@@ -9,7 +9,7 @@ public class OrganicCat extends VirtualCat implements OrganicAnimal {
 
     @Override
     public int feedOrganicPet() {
-        hungerLevel = hungerLevel - 15;
+        hungerLevel = hungerLevel - 30;
         if (hungerLevel < 0) {
             hungerLevel = 0;
         }
@@ -18,7 +18,7 @@ public class OrganicCat extends VirtualCat implements OrganicAnimal {
 
     @Override
     public int giveOrganicPetWater() {
-        thirstLevel = thirstLevel - 15;
+        thirstLevel = thirstLevel - 30;
         if (thirstLevel < 0) {
             thirstLevel = 0;
         }

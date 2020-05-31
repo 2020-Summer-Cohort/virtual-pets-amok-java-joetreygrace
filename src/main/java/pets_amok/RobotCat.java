@@ -13,7 +13,7 @@ public class RobotCat extends VirtualCat implements RobotAnimal {
 
     @Override
     public int oilRobotPet() {
-        maintenanceLevel -= 15;
+        maintenanceLevel -= 35;
         if (maintenanceLevel < 0) {
             maintenanceLevel = 0;
         }

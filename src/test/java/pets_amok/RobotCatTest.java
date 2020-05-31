@@ -58,7 +58,7 @@ public class RobotCatTest {
     public void robotCatShouldGetOiled() {
         VirtualPet underTest = new RobotCat("Sue");
         ((RobotCat) underTest).oilRobotPet();
-        assertEquals(10, ((RobotCat) underTest).getMaintenanceLevel());
+        assertEquals(0, ((RobotCat) underTest).getMaintenanceLevel());
     }
 
     @Test

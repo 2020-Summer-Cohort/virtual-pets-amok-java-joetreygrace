@@ -38,10 +38,7 @@ public class OrganicDog extends VirtualDog implements OrganicAnimal {
 
     @Override
     public int playWithPet() {
-        boredomLevel = boredomLevel - 25;
-        if (boredomLevel < 0) {
-            boredomLevel = 0;
-        }
+        boredomLevel = 0;
         happinessLevel += 10;
         if (happinessLevel > 100) {
             happinessLevel = 100;
