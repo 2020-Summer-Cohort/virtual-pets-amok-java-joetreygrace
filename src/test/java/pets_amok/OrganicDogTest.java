@@ -25,13 +25,13 @@ public class OrganicDogTest {
     @Test
     public void organicDogShouldHaveHunger() {
         VirtualPet underTest = new OrganicDog("Sam");
-        assertEquals(15, underTest.getHungerLevel());
+        assertEquals(15, ((OrganicDog) underTest).getHungerLevel());
     }
 
     @Test
     public void organicDogShouldHaveThirst() {
         VirtualPet underTest = new OrganicDog("Sam");
-        assertEquals(15, underTest.getThirstLevel());
+        assertEquals(15, ((OrganicDog) underTest).getThirstLevel());
     }
 
     @Test
@@ -49,13 +49,19 @@ public class OrganicDogTest {
     @Test
     public void organicDogShouldHaveHappiness(){
         VirtualPet underTest = new OrganicDog("Sam");
-        assertEquals(100,underTest.getHappinessLevel());
+        assertEquals(75,underTest.getHappinessLevel());
     }
 
     @Test
     public void organicDogShouldHaveCageDirtiness(){
         VirtualPet underTest = new OrganicDog("Sam");
-        assertEquals(0,underTest.getCageDirtiness());
+        assertEquals(0, ((OrganicDog) underTest).getCageDirtiness());
+    }
+
+    @Test
+    public void organicDogShouldHaveLikelihoodToSoilCage(){
+        VirtualPet underTest = new OrganicDog("Sam");
+        assertEquals(25, ((OrganicDog) underTest).getLikelihoodToSoilCage());
     }
 
     @Test
@@ -63,5 +69,37 @@ public class OrganicDogTest {
         VirtualPet underTest = new OrganicDog("Sam");
         underTest.walkTheDog();
         assertEquals(0,underTest.getBoredomLevel());
+        assertEquals(85,underTest.getHappinessLevel());
+        assertEquals(10, ((OrganicDog) underTest).getLikelihoodToSoilCage());
+    }
+
+    @Test
+    public void organicDogShouldGetFed(){
+        VirtualPet underTest = new OrganicDog("Sam");
+        ((OrganicDog) underTest).feedOrganicPet();
+        assertEquals(0, ((OrganicDog) underTest).getHungerLevel());
+    }
+
+    @Test
+    public void organicDogShouldGetWater(){
+        VirtualPet underTest = new OrganicDog("Sam");
+        ((OrganicDog) underTest).giveOrganicPetWater();
+        assertEquals(0, ((OrganicDog) underTest).getThirstLevel());
+    }
+
+    @Test
+    public void shouldOrganicDogCages(){
+        VirtualPet underTest = new OrganicDog("Sam");
+        ((OrganicDog) underTest).cleanOrganicDogCage();
+        assertEquals(0,((OrganicDog) underTest).getCageDirtiness());
+    }
+
+    @Test
+    public void organicDogShouldTick(){
+        VirtualPet underTest = new OrganicDog("Sam");
+        underTest.tick();
+        assertEquals(20,underTest.getBoredomLevel());
+        assertEquals(20, ((OrganicDog) underTest).getThirstLevel());
+        assertEquals(20,((OrganicDog) underTest).getHungerLevel());
     }
 }
