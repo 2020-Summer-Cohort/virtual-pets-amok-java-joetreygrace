@@ -37,7 +37,7 @@ public class OrganicDog extends VirtualDog implements OrganicAnimal {
     }
 
     @Override
-    public int walkTheDog() {
+    public int playWithPet() {
         boredomLevel = boredomLevel - 25;
         if (boredomLevel < 0) {
             boredomLevel = 0;

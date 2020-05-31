@@ -1,8 +1,8 @@
 package pets_amok;
 
-public abstract class VirtualDog extends VirtualPet {
-    public VirtualDog(String virtualPetName, String virtualPetDescription) {
-        super(virtualPetName, virtualPetDescription);
+public abstract class VirtualCat extends VirtualPet {
+    public VirtualCat(String virtualPetName, String virtualPetDescriptor) {
+        super(virtualPetName, virtualPetDescriptor);
     }
 
     public int playWithPet() {
@@ -16,4 +16,5 @@ public abstract class VirtualDog extends VirtualPet {
         }
         return boredomLevel;
     }
+
 }

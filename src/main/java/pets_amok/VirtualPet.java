@@ -40,7 +40,7 @@ public abstract class VirtualPet {
 
     public abstract void tick();
 
-    public abstract int walkTheDog();
+    public abstract int playWithPet();
 
 }
 

@@ -49,7 +49,7 @@ public class RobotDogTest {
     @Test
     public void robotDogShouldBeWalked(){
         VirtualDog underTest = new RobotDog("Spark");
-        underTest.walkTheDog();
+        underTest.playWithPet();
         assertEquals(0,underTest.getBoredomLevel());
         assertEquals(85,underTest.getHappinessLevel());
     }

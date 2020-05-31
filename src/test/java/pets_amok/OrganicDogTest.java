@@ -67,7 +67,7 @@ public class OrganicDogTest {
     @Test
     public void organicDogShouldBeWalked(){
         VirtualPet underTest = new OrganicDog("Sam");
-        underTest.walkTheDog();
+        underTest.playWithPet();
         assertEquals(0,underTest.getBoredomLevel());
         assertEquals(85,underTest.getHappinessLevel());
         assertEquals(10, ((OrganicDog) underTest).getLikelihoodToSoilCage());
@@ -88,7 +88,7 @@ public class OrganicDogTest {
     }
 
     @Test
-    public void shouldOrganicDogCages(){
+    public void shouldCleanOrganicDogCages(){
         VirtualPet underTest = new OrganicDog("Sam");
         ((OrganicDog) underTest).cleanOrganicDogCage();
         assertEquals(0,((OrganicDog) underTest).getCageDirtiness());
